@@ -1,0 +1,27 @@
+weights = [3,6,8,2]
+profits = [24,18,20,24]
+max_cap = 15
+
+
+
+print(list(zip(profits,weights)))
+profit_per_unit = [  p/w for (p,w)   in       zip(profits,weights)]
+print(profit_per_unit)
+item_lists = list(zip(profit_per_unit,weights,profits))
+
+
+item_lists.sort(reverse = True)
+print(item_lists)
+
+max_profit = 0
+   
+for unit_unit,weights,profit in items_lists:
+    if max_cap == 0:
+        break
+    if weight <= max_cap:
+        max_profit = profit
+        max_cap-=weight
+    else:
+        max_cap += max_cap*unit_profits
+        max_cap=0
+print(max_profit)
